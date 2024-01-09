@@ -1,0 +1,24 @@
+//{{V2}}
+ORGANIZATION_BLOCK OB2
+TITLE= <Title of OB>
+
+
+AUTHOR:n/a
+FAMILY:n/a
+NAME:n/a
+VERSION:1.0
+
+
+VAR_TEMP
+       OB1_System:ARRAY [1..20] OF BYTE 
+END_VAR
+BEGIN
+
+NETWORK
+TITLE=   <Title of Network>
+//{{a}}
+
+
+
+
+END_ORGANIZATION_BLOCK

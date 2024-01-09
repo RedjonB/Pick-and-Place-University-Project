@@ -1,0 +1,790 @@
+//{{V2}}
+ORGANIZATION_BLOCK OB1
+TITLE= "Cyclic main program"
+
+
+AUTHOR:nb
+FAMILY:nb
+NAME:nb
+VERSION:1.0
+
+
+VAR_TEMP
+       OB1_EV_CLASS:BYTE //Bits 0-3 = 1 (Coming event), Bits 4-7 = 1 (Event class 1)
+       OB1_SCAN_1:BYTE //1 (Cold restart scan 1 of OB 1), 3 (Scan 2-n of OB 1)
+       OB1_PRIORITY:BYTE //1 (Priority of 1 is lowest)
+       OB1_OB_NUMBR:BYTE //1 (Organization block 1, OB1)
+       OB1_RESERVED_1:BYTE //Reserved for system
+       OB1_RESERVED_2:BYTE //Reserved for system
+       OB1_PREV_CYCLE:INT //Cycle time of previous OB1 scan (milliseconds)
+       OB1_MIN_CYCLE:INT //Minimum cycle time of OB1 (milliseconds)
+       OB1_MAX_CYCLE:INT //Maximum cycle time of OB1 (milliseconds)
+       OB1_DATE_TIME:DATE_AND_TIME //Date and time OB1 started
+END_VAR
+BEGIN
+
+NETWORK
+TITLE= 
+//{{k}}
+
+       A(  
+       O    I1.4  
+       O    M         0.0  
+       )    
+       A    I         1.5  
+       A    I         1.7  
+       =    M         0.0  
+       =    Q1.0  
+NETWORK
+TITLE=
+//{{k}}
+
+       A(  
+       ON   I0.2  
+       O    
+       A    M         3.0  
+       A    M         3.3  
+       O    
+       A    M         3.1  
+       A    M         3.4  
+       O    
+       A    M         3.2  
+       A    M         3.5  
+       )    
+       A    I         0.4  
+       A    I         0.3  
+       A    M         0.0  
+       =    Q0.0  
+NETWORK
+TITLE=
+//{{k}}
+
+       A(   
+       ON   I0.3  
+       O    
+       A(   
+       A    M         2.4  
+       L    S5T#10S
+       SE   T11  
+       NOP  0  
+       NOP  0  
+       NOP  0  
+       A    T11  
+       )    
+//{{OR}}  
+       )    
+       A    M         0.0  
+       =    Q0.1  
+NETWORK
+TITLE= 
+//{{k}}
+
+       A    M         1.2  
+       L    S5T#10S  
+       SS   T12  
+       A(   
+       O    M         0.4  
+       O    M         0.6  
+       O    M         1.0  
+       )    
+       R    T12  
+       NOP  0  
+       NOP  0  
+       A    T12  
+       =    M         2.4  
+NETWORK
+TITLE=
+//{{k}}
+
+       AN   I0.5  
+       AN   I         0.4  
+       AN   I         1.0  
+       A    M         0.0
+       =    Q         0.4  
+       =    Q0.3  
+NETWORK
+TITLE=
+//{{k}}
+
+       A(
+       A    I0.2  
+       A    I         0.4  
+       AN   I         1.0  
+       A(   
+       AN   M         3.0
+       A    M         3.3
+       O    
+       AN   M         3.1
+       A    M         3.4
+       O    
+       AN   M         3.2
+       A    M         3.5
+       )    
+       O    
+       A    M         1.3  
+       A    Q         0.7  
+       O    
+       A    M         1.4  
+       A    Q         0.7  
+       O    
+       A    M         1.5  
+       A    Q         0.7  
+       O    
+       A    M         1.6  
+       A    Q         0.7  
+       O    
+       A    M         1.7  
+       A    Q         0.7  
+       O    
+       A    M         2.0  
+       A    Q         0.7  
+       O    
+       A    M         2.1  
+       A    Q         0.7  
+       O    
+       A    M         2.2  
+       A    Q         0.7  
+       O    
+       A    M         2.3  
+       A    Q         0.7  
+       )    
+       A    M         0.0
+       =    Q0.6
+NETWORK
+TITLE= 
+//{{k}}
+
+       A    I0.7
+       AN   M         1.3
+       AN   M         1.4
+       AN   M         1.5
+       AN   M         1.6
+       AN   M         1.7
+       AN   M         2.0
+       AN   M         2.1
+       AN   M         2.2
+       AN   M         2.3
+       O    
+       A    I1.0
+       AN   I         0.7
+       =    Q0.7
+NETWORK
+TITLE= 
+//{{k}}
+
+       A    I0.1  
+       AN   I         0.0
+       L    S5T#7S  
+       SE   T1  
+       NOP  0  
+       NOP  0  
+       NOP  0  
+       A    T1  
+       =    M         0.1  
+NETWORK
+TITLE=
+//{{k}}
+
+       A    I         0.0  
+       AN   I         0.1  
+       L    S5T#5S  
+       SE   T2  
+       NOP  0  
+       NOP  0  
+       NOP  0  
+       A    T2  
+       =    M         0.2  
+NETWORK
+TITLE=
+//{{k}}
+
+       A    I0.0  
+       A    I         0.1  
+       L    S5T#8S
+       SE   T3  
+       NOP  0  
+       NOP  0  
+       NOP  0  
+       A    T3  
+       =    M         0.3  
+NETWORK
+TITLE=
+//{{k}}
+
+       A(   
+       O    M         0.1  
+       O    M         0.2  
+       O    M         0.3  
+       )    
+       AN   I         0.5  
+       A    I         1.0  
+       A    I         0.6  
+       A    M         0.0
+       =    Q         0.5  
+NETWORK
+TITLE=
+//{{k}}
+
+       A    I0.0  
+       AN   I         0.1  
+       AN   M         3.0
+       CU   C1  
+       BLD  101  
+       A    I         1.4  
+       L    C#000  
+       S    C1  
+       A(   
+       O    M         0.5
+       O    M         3.0
+       )    
+       R    C1  
+       NOP  0  
+       NOP  0  
+       A    C1  
+       A(   
+       L    C1  
+       L    1  
+       >I   
+       )    
+       L    S5T#4S  
+       SE   T4  
+       NOP  0  
+       NOP  0  
+       NOP  0  
+       A    T4  
+       =    M         0.4  
+NETWORK
+TITLE= 
+//{{k}}
+
+       A    I0.0
+       AN   I         0.1  
+       AN   M         3.0  
+       CU   C2  
+       BLD  101  
+       A    I         1.4  
+       L    C#000  
+       S    C2  
+       A(   
+       O    M         0.5  
+       O    M         3.0  
+       )    
+       R    C2  
+       NOP  0  
+       NOP  0  
+       A    C2  
+       A(   
+       L    C2  
+       L    2  
+       >I   
+       )    
+       L    S5T#7S  
+       SE   T5  
+       NOP  0  
+       NOP  0  
+       NOP  0  
+       A    T5  
+       =    M         0.5
+NETWORK
+TITLE= 
+//{{k}}
+
+       A(  
+       A(   
+       A    I         0.1  
+       AN   I         0.0  
+       AN   M         3.1
+       CU   C3  
+       BLD  101  
+       A    I         1.4  
+       L    C#000  
+       S    C3  
+       A(   
+       O    M         0.7
+       O    M         3.1
+       )    
+       R    C3  
+       NOP  0  
+       NOP  0  
+       A    C3  
+       )    
+       A(   
+       L    C3  
+       L    1  
+       >I   
+       )    
+       L    S5T#4S  
+       SE   T6  
+       NOP  0  
+       NOP  0  
+       NOP  0  
+       A    T6  
+       )    
+       =    M         0.6  
+NETWORK
+TITLE=
+//{{k}}
+
+       A(  
+       A(   
+       A    I         0.1  
+       AN   I         0.0  
+       AN   M         3.1
+       CU   C4  
+       BLD  101  
+       A    I         1.4  
+       L    C#000  
+       S    C4  
+       A(   
+       O    M         0.7
+       O    M         3.1
+       )    
+       R    C4  
+       NOP  0  
+       NOP  0  
+       A    C4  
+       )    
+       A(   
+       L    C4  
+       L    2  
+       >I   
+       )    
+       L    S5T#7S  
+       SE   T7  
+       NOP  0  
+       NOP  0  
+       NOP  0  
+       A    T7  
+       )    
+       =    M         0.7  
+NETWORK
+TITLE=
+//{{k}}
+
+       A(
+       A(   
+       A    I         0.0  
+       A    I         0.1  
+       AN   M         3.2
+       CU   C5  
+       BLD  101  
+       A    I         1.4  
+       L    C#000  
+       S    C5  
+       A(   
+       O    M         1.1
+       O    M         3.2
+       )    
+       R    C5  
+       NOP  0  
+       NOP  0  
+       A    C5  
+       )    
+       A(   
+       L    C5  
+       L    1  
+       >I   
+       )    
+       L    S5T#4S  
+       SE   T8  
+       NOP  0  
+       NOP  0  
+       NOP  0  
+       A    T8  
+       )    
+       =    M         1.0
+NETWORK
+TITLE=
+//{{k}}
+
+       A(  
+       A(   
+       A    I         0.0  
+       A    I         0.1  
+       AN   M         3.2
+       CU   C6  
+       BLD  101  
+       A    I         1.4  
+       L    C#000  
+       S    C6  
+       A(   
+       O    M         1.1
+       O    M         3.2
+       )    
+       R    C6  
+       NOP  0  
+       NOP  0  
+       A    C6  
+       )    
+       A(   
+       L    C6  
+       L    2  
+       >I   
+       )    
+       L    S5T#7S  
+       SE   T9  
+       NOP  0  
+       NOP  0  
+       NOP  0  
+       A    T9  
+       )    
+       =    M         1.1  
+NETWORK
+TITLE=
+//{{k}}
+
+       A(
+       O    M         0.4  
+       O    M         0.5  
+       O    M         0.6  
+       O    M         0.7  
+       O    M         1.0  
+       O    M         1.1  
+       )    
+       AN   I         0.5  
+       A    I         0.6  
+       A    I         1.0  
+       A    M         0.0
+       =    Q0.2
+NETWORK
+TITLE=
+//{{k}}
+
+       A    I0.0  
+       AN   I         0.1  
+       AN   M         0.4  
+       AN   M         0.5
+       L    S5T#6S  
+       SS   T10  
+       A(   
+       O    M         0.4  
+       O    I         0.1  
+       O    
+       A    I         0.0  
+       A    I         0.1  
+       )    
+       R    T10  
+       NOP  0  
+       NOP  0  
+       A    T10  
+       =    M         1.3  
+NETWORK
+TITLE=
+//{{k}}
+
+       A    I         0.1  
+       AN   I         0.0  
+       AN   M         0.6  
+       AN   M         0.7  
+       L    S5T#7S  
+       SS   T13  
+       A(   
+       O    M         0.6  
+       O    I         0.0  
+       O    
+       A    I         0.0  
+       A    I         0.1  
+       )    
+       R    T13  
+       NOP  0  
+       NOP  0  
+       A    T13  
+       =    M         1.4  
+NETWORK
+TITLE= 
+//{{k}}
+
+       A    I0.0
+       A    I         0.1  
+       AN   M         1.0  
+       AN   M         1.1
+       L    S5T#8S
+       SS   T14  
+       A(   
+       A    M         1.0  
+       O    
+       A    I0.0  
+       AN   I         0.1  
+       O    
+       A    I0.1  
+       AN   I         0.0  
+       )    
+       R    T14  
+       NOP  0  
+       NOP  0  
+       A    T14  
+       =    M         1.5
+NETWORK
+TITLE=
+//{{k}}
+
+       A    I0.0
+       AN   I         0.1  
+       A    M         0.4  
+       AN   M         0.5  
+       L    S5T#5S
+       SS   T15  
+       A(   
+       A(   
+       O    M         0.5
+       O    I         0.1
+       )    
+       O    
+       A    I         0.0  
+       A    I         0.1  
+       )    
+       R    T15  
+       NOP  0  
+       NOP  0  
+       A    T15  
+       =    M         1.6
+NETWORK
+TITLE=
+//{{k}}
+
+       A    I         0.1  
+       AN   I         0.0  
+       A    M         0.6  
+       AN   M         0.7  
+       L    S5T#7S
+       SS   T16  
+       A(   
+       O    M         0.7  
+       O    I         0.0  
+       O    
+       A    I         0.0  
+       A    I         0.1  
+       )    
+       R    T16  
+       NOP  0  
+       NOP  0  
+       A    T16  
+       =    M         1.7  
+NETWORK
+TITLE=
+//{{k}}
+
+       A(   
+       A    I         0.0  
+       A    I         0.1  
+       A    M         1.0  
+       AN   M         1.1  
+       L    S5T#8S  
+       SS   T17  
+       A(   
+       A    M         1.1  
+       O    
+       A    I         0.0  
+       AN   I         0.1  
+       O    
+       A    I         0.1  
+       AN   I         0.0  
+       )    
+       R    T17  
+       NOP  0  
+       NOP  0  
+       A    T17  
+       )    
+       =    M         2.0  
+NETWORK
+TITLE=
+//{{k}}
+
+       A    I0.0  
+       AN   I         0.1  
+       A    M         0.5  
+       L    S5T#7S  
+       SS   T18  
+       A(   
+       ON   I0.3
+       O    
+       AN   I         0.0
+       A    I         0.1
+       O    
+       A    I         0.0
+       A    I         0.1
+       )    
+       R    T18  
+       NOP  0  
+       NOP  0  
+       A    T18  
+       =    M         2.1  
+NETWORK
+TITLE= 
+//{{k}}
+
+       A    I0.1  
+       AN   I         0.0  
+       A    M         0.7  
+       L    S5T#7S  
+       SS   T19  
+       A(   
+       ON   I0.3
+       O    
+       AN   I         0.1
+       A    I         0.0
+       O    
+       A    I         0.0
+       A    I         0.1
+       )    
+       R    T19  
+       NOP  0  
+       NOP  0  
+       A    T19  
+       =    M         2.2  
+NETWORK
+TITLE=
+//{{k}}
+
+       A    I0.1  
+       A    I         0.0  
+       A    M         1.1  
+       L    S5T#8S  
+       SS   T20  
+       A(   
+       ON   I0.3
+       O    
+       AN   I         0.0
+       A    I         0.1
+       O    
+       AN   I         0.1
+       A    I         0.0
+       )    
+       R    T20  
+       NOP  0  
+       NOP  0  
+       A    T20  
+       =    M         2.3  
+NETWORK
+TITLE= 
+//{{k}}
+
+       A    I0.0
+       AN   I         0.1
+       CU   C8
+       BLD  101
+       A    I         1.4
+       L    C#000
+       S    C8
+       A    M         1.2
+       R    C8
+       NOP  0
+       NOP  0
+       A    C8
+       A(   
+       L    C8
+       L    3
+       >I   
+       )    
+       =    M         3.0
+NETWORK
+TITLE=
+//{{k}}
+
+       A    I         0.1
+       AN   I         0.0
+       CU   C9
+       BLD  101  
+       A    I         1.4
+       L    C#000  
+       S    C9
+       A    M         1.2
+       R    C9
+       NOP  0  
+       NOP  0  
+       A    C9
+       A(   
+       L    C9
+       L    3
+       >I   
+       )    
+       =    M         3.1
+NETWORK
+TITLE=
+//{{k}}
+
+       A    I         0.0
+       A    I         0.1
+       CU   C10
+       BLD  101  
+       A    I         1.4
+       L    C#000  
+       S    C10
+       A    M         1.2
+       R    C10
+       NOP  0  
+       NOP  0  
+       A    C10
+       A(   
+       L    C10
+       L    3
+       >I   
+       )    
+       =    M         3.2
+NETWORK
+TITLE= 
+//{{k}}
+
+       A    I         0.0
+       AN   I         0.1
+       L    S5T#3S
+       SE   T21
+       NOP  0
+       NOP  0
+       NOP  0
+       A    T21
+       =    M         3.3
+NETWORK
+TITLE=
+//{{k}}
+
+       A    I         0.1
+       AN   I         0.0
+       L    S5T#3S
+       SE   T22
+       NOP  0  
+       NOP  0  
+       NOP  0  
+       A    T22
+       =    M         3.4
+NETWORK
+TITLE=
+//{{k}}
+
+       A    I         0.0
+       A    I         0.1
+       L    S5T#3S
+       SE   T23
+       NOP  0  
+       NOP  0  
+       NOP  0  
+       A    T23
+       =    M         3.5
+NETWORK
+TITLE= 
+//{{k}}
+
+       A(  
+       A(   
+       O    M         0.5  
+       O    M         0.7  
+       O    M         1.1  
+       )    
+       CU   C7  
+       BLD  101  
+       A    I         1.4  
+       L    C#000  
+       S    C7  
+       A    M         1.2  
+       R    C7  
+       NOP  0  
+       NOP  0  
+       A    C7  
+       )    
+       A(   
+       L    C7  
+       L    2  
+       >I   
+       )    
+       =    M         1.2  
+END_ORGANIZATION_BLOCK

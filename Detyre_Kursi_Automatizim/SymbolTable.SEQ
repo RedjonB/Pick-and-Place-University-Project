@@ -1,0 +1,22 @@
+Sensor 0	I    0.0	BOOL	
+Sensor 1	E    0.1	BOOL	
+Sensor 2	E    0.2	BOOL	
+Sensor 3	E    0.3	BOOL	
+Sensor 4	E    0.4	BOOL	
+Sensor 5	E    0.5	BOOL	
+Sensor 6	I    0.6	BOOL	
+Sensor 7	E    0.7	BOOL	
+Sensor 8	E    1.0	BOOL	
+Sensor 9	E    1.1	BOOL	
+Start	E    1.4	BOOL	
+Stop	E    1.5	BOOL	
+Actuator 0	A    0.0	BOOL	
+Actuator 1	A    0.1	BOOL	
+Actuator 2	A    0.2	BOOL	
+Actuator 3	A    0.3	BOOL	
+Actuator 4	A    0.4	BOOL	
+Actuator 5	A    0.5	BOOL	
+Actuator 6	A    0.6	BOOL	
+Actuator 7	A    0.7	BOOL	
+Emergency Stop	I    1.7	BOOL	
+Start_Light	Q    1.0	BOOL	

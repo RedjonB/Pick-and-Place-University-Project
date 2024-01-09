@@ -1,0 +1,180 @@
+Hit ENTER to open the editor!
+INPUTS
+
+   I0.0            # OB1      NETWORK 007 Line 0001 # R # AN   I         0.0
+                   # OB1      NETWORK 008 Line 0000 # R # A    I         0.0
+                   # OB1      NETWORK 009 Line 0000 # R # A    I0.0
+                   # OB1      NETWORK 011 Line 0000 # R # A    I0.0
+                   # OB1      NETWORK 012 Line 0000 # R # A    I0.0
+                   # OB1      NETWORK 013 Line 0003 # R # AN   I         0.0
+                   # OB1      NETWORK 014 Line 0003 # R # AN   I         0.0
+                   # OB1      NETWORK 015 Line 0002 # R # A    I         0.0
+                   # OB1      NETWORK 016 Line 0002 # R # A    I         0.0
+                   # OB1      NETWORK 019 Line 0000 # R # A    I0.0
+                   # OB1      NETWORK 020 Line 0001 # R # AN   I         0.0
+                   # OB1      NETWORK 021 Line 0000 # R # A    I0.0
+   I0.1            # OB1      NETWORK 007 Line 0000 # R # A    I0.1
+                   # OB1      NETWORK 008 Line 0001 # R # AN   I         0.1
+                   # OB1      NETWORK 009 Line 0001 # R # A    I         0.1
+                   # OB1      NETWORK 011 Line 0001 # R # AN   I         0.1
+                   # OB1      NETWORK 012 Line 0001 # R # AN   I         0.1
+                   # OB1      NETWORK 013 Line 0002 # R # A    I         0.1
+                   # OB1      NETWORK 014 Line 0002 # R # A    I         0.1
+                   # OB1      NETWORK 015 Line 0003 # R # A    I         0.1
+                   # OB1      NETWORK 016 Line 0003 # R # A    I         0.1
+                   # OB1      NETWORK 019 Line 0001 # R # AN   I         0.1
+                   # OB1      NETWORK 020 Line 0000 # R # A    I         0.1
+                   # OB1      NETWORK 021 Line 0001 # R # A    I         0.1
+   I0.2            # OB1      NETWORK 002 Line 0000 # R # AN   I0.2
+                   # OB1      NETWORK 005 Line 0000 # R # A    I0.2
+   I0.3            # OB1      NETWORK 003 Line 0000 # R # ON   I         0.3
+   I0.4            # OB1      NETWORK 002 Line 0001 # R # A    I         0.4
+                   # OB1      NETWORK 004 Line 0001 # R # AN   I         0.4
+                   # OB1      NETWORK 005 Line 0001 # R # A    I         0.4
+   I0.5            # OB1      NETWORK 004 Line 0000 # R # AN   I0.5
+                   # OB1      NETWORK 010 Line 0005 # R # AN   I         0.5
+                   # OB1      NETWORK 017 Line 0008 # R # AN   I         0.5
+   I0.6            # OB1      NETWORK 010 Line 0007 # R # A    I         0.6
+                   # OB1      NETWORK 017 Line 0009 # R # A    I         0.6
+   I0.7            # OB1      NETWORK 006 Line 0000 # R # O    I0.7
+   I1.0            # OB1      NETWORK 004 Line 0002 # R # AN   I         1.0
+                   # OB1      NETWORK 005 Line 0002 # R # AN   I         1.0
+                   # OB1      NETWORK 006 Line 0001 # R # O    I1.0
+                   # OB1      NETWORK 010 Line 0006 # R # A    I         1.0
+                   # OB1      NETWORK 017 Line 0010 # R # A    I         1.0
+   I1.4            # OB1      NETWORK 001 Line 0001 # R # O    I1.4
+                   # OB1      NETWORK 011 Line 0004 # R # A    I         1.4
+                   # OB1      NETWORK 012 Line 0004 # R # A    I         1.4
+                   # OB1      NETWORK 013 Line 0006 # R # A    I         1.4
+                   # OB1      NETWORK 014 Line 0006 # R # A    I         1.4
+                   # OB1      NETWORK 015 Line 0006 # R # A    I         1.4
+                   # OB1      NETWORK 016 Line 0006 # R # A    I         1.4
+                   # OB1      NETWORK 018 Line 0008 # R # A    I         1.4
+   I1.5            # OB1      NETWORK 001 Line 0004 # R # A    I         1.5
+
+OUTPUTS
+
+   Q0.0            # OB1      NETWORK 002 Line 0002 # W # =    Q         0.0
+   Q0.1            # OB1      NETWORK 003 Line 0017 # W # =    Q0.1
+   Q0.2            # OB1      NETWORK 017 Line 0011 # W # =    Q0.2
+   Q0.3            # OB1      NETWORK 004 Line 0004 # W # =    Q0.3
+   Q0.4            # OB1      NETWORK 004 Line 0003 # W # =    Q         0.4
+   Q0.5            # OB1      NETWORK 010 Line 0008 # W # =    Q         0.5
+   Q0.6            # OB1      NETWORK 005 Line 0006 # W # =    Q0.6
+   Q0.7            # OB1      NETWORK 006 Line 0002 # W # =    Q         0.7
+
+BIT MEMORY
+
+   M0.0            # OB1      NETWORK 001 Line 0002 # R # O    M         0.0
+                   # OB1      NETWORK 001 Line 0005 # W # =    M         0.0
+   M0.1            # OB1      NETWORK 007 Line 0008 # W # =    M         0.1
+                   # OB1      NETWORK 010 Line 0001 # R # O    M         0.1
+   M0.2            # OB1      NETWORK 008 Line 0008 # W # =    M         0.2
+                   # OB1      NETWORK 010 Line 0002 # R # O    M         0.2
+   M0.3            # OB1      NETWORK 009 Line 0008 # W # =    M         0.3
+                   # OB1      NETWORK 010 Line 0003 # R # O    M         0.3
+   M0.4            # OB1      NETWORK 011 Line 0023 # W # =    M         0.4
+                   # OB1      NETWORK 017 Line 0001 # R # O    M         0.4
+   M0.5            # OB1      NETWORK 011 Line 0007 # R # A    M         0.5
+                   # OB1      NETWORK 012 Line 0007 # R # A    M         0.5
+                   # OB1      NETWORK 012 Line 0023 # W # =    M         0.5
+                   # OB1      NETWORK 017 Line 0002 # R # O    M         0.5
+                   # OB1      NETWORK 018 Line 0002 # R # O    M         0.5
+                   # OB1      NETWORK 019 Line 0004 # R # A    M         0.5
+   M0.6            # OB1      NETWORK 013 Line 0027 # W # =    M         0.6
+                   # OB1      NETWORK 017 Line 0003 # R # O    M         0.6
+   M0.7            # OB1      NETWORK 013 Line 0009 # R # A    M         0.7
+                   # OB1      NETWORK 014 Line 0009 # R # A    M         0.7
+                   # OB1      NETWORK 014 Line 0027 # W # =    M         0.7
+                   # OB1      NETWORK 017 Line 0004 # R # O    M         0.7
+                   # OB1      NETWORK 018 Line 0003 # R # O    M         0.7
+                   # OB1      NETWORK 020 Line 0004 # R # A    M         0.7
+   M1.0            # OB1      NETWORK 015 Line 0027 # W # =    M         1.0
+                   # OB1      NETWORK 017 Line 0005 # R # O    M         1.0
+   M1.1            # OB1      NETWORK 015 Line 0009 # R # A    M         1.1
+                   # OB1      NETWORK 016 Line 0009 # R # A    M         1.1
+                   # OB1      NETWORK 016 Line 0027 # W # =    M         1.1
+                   # OB1      NETWORK 017 Line 0006 # R # O    M         1.1
+                   # OB1      NETWORK 018 Line 0004 # R # O    M         1.1
+                   # OB1      NETWORK 021 Line 0004 # R # A    M         1.1
+   M1.2            # OB1      NETWORK 003 Line 0002 # R # A    M         1.2
+                   # OB1      NETWORK 018 Line 0011 # R # A    M         1.2
+                   # OB1      NETWORK 018 Line 0022 # W # =    M         1.2
+   M1.3            # OB1      NETWORK 005 Line 0003 # R # O    M         1.3
+                   # OB1      NETWORK 019 Line 0009 # W # =    M         1.3
+   M1.4            # OB1      NETWORK 005 Line 0004 # R # O    M         1.4
+                   # OB1      NETWORK 020 Line 0009 # W # =    M         1.4
+   M1.5            # OB1      NETWORK 005 Line 0005 # R # O    M         1.5
+                   # OB1      NETWORK 021 Line 0009 # W # =    M         1.5
+
+TIMER
+
+   T1              # OB1      NETWORK 007 Line 0003 # W # SE   T1
+                   # OB1      NETWORK 007 Line 0007 # R # A    T1
+   T2              # OB1      NETWORK 008 Line 0003 # W # SE   T2
+                   # OB1      NETWORK 008 Line 0007 # R # A    T2
+   T3              # OB1      NETWORK 009 Line 0003 # W # SE   T3
+                   # OB1      NETWORK 009 Line 0007 # R # A    T3
+   T4              # OB1      NETWORK 011 Line 0018 # W # SE   T4
+                   # OB1      NETWORK 011 Line 0022 # R # A    T4
+   T5              # OB1      NETWORK 012 Line 0018 # W # SE   T5
+                   # OB1      NETWORK 012 Line 0022 # R # A    T5
+   T6              # OB1      NETWORK 013 Line 0021 # W # SE   T6
+                   # OB1      NETWORK 013 Line 0025 # R # A    T6
+   T7              # OB1      NETWORK 014 Line 0021 # W # SE   T7
+                   # OB1      NETWORK 014 Line 0025 # R # A    T7
+   T8              # OB1      NETWORK 015 Line 0021 # W # SE   T8
+                   # OB1      NETWORK 015 Line 0025 # R # A    T8
+   T9              # OB1      NETWORK 016 Line 0021 # W # SE   T9
+                   # OB1      NETWORK 016 Line 0025 # R # A    T9
+   T10             # OB1      NETWORK 019 Line 0003 # W # SS   T10
+                   # OB1      NETWORK 019 Line 0005 # W # R    T10
+                   # OB1      NETWORK 019 Line 0008 # R # A    T10
+   T11             # OB1      NETWORK 003 Line 0004 # W # SD   T11
+                   # OB1      NETWORK 003 Line 0008 # R # A    T11
+   T12             # OB1      NETWORK 003 Line 0010 # W # SE   T12
+                   # OB1      NETWORK 003 Line 0014 # R # A    T12
+   T13             # OB1      NETWORK 020 Line 0003 # W # SS   T13
+                   # OB1      NETWORK 020 Line 0005 # W # R    T13
+                   # OB1      NETWORK 020 Line 0008 # R # A    T13
+   T14             # OB1      NETWORK 021 Line 0003 # W # SS   T14
+                   # OB1      NETWORK 021 Line 0005 # W # R    T14
+                   # OB1      NETWORK 021 Line 0008 # R # A    T14
+
+COUNTER
+
+   C1              # OB1      NETWORK 011 Line 0002 # W # CU   C1
+                   # OB1      NETWORK 011 Line 0006 # W # S    C1
+                   # OB1      NETWORK 011 Line 0008 # W # R    C1
+                   # OB1      NETWORK 011 Line 0011 # R # A    C1
+                   # OB1      NETWORK 011 Line 0013 # R # L    C1
+   C2              # OB1      NETWORK 012 Line 0002 # W # CU   C2
+                   # OB1      NETWORK 012 Line 0006 # W # S    C2
+                   # OB1      NETWORK 012 Line 0008 # W # R    C2
+                   # OB1      NETWORK 012 Line 0011 # R # A    C2
+                   # OB1      NETWORK 012 Line 0013 # R # L    C2
+   C3              # OB1      NETWORK 013 Line 0004 # W # CU   C3
+                   # OB1      NETWORK 013 Line 0008 # W # S    C3
+                   # OB1      NETWORK 013 Line 0010 # W # R    C3
+                   # OB1      NETWORK 013 Line 0013 # R # A    C3
+                   # OB1      NETWORK 013 Line 0016 # R # L    C3
+   C4              # OB1      NETWORK 014 Line 0004 # W # CU   C4
+                   # OB1      NETWORK 014 Line 0008 # W # S    C4
+                   # OB1      NETWORK 014 Line 0010 # W # R    C4
+                   # OB1      NETWORK 014 Line 0013 # R # A    C4
+                   # OB1      NETWORK 014 Line 0016 # R # L    C4
+   C5              # OB1      NETWORK 015 Line 0004 # W # CU   C5
+                   # OB1      NETWORK 015 Line 0008 # W # S    C5
+                   # OB1      NETWORK 015 Line 0010 # W # R    C5
+                   # OB1      NETWORK 015 Line 0013 # R # A    C5
+                   # OB1      NETWORK 015 Line 0016 # R # L    C5
+   C6              # OB1      NETWORK 016 Line 0004 # W # CU   C6
+                   # OB1      NETWORK 016 Line 0008 # W # S    C6
+                   # OB1      NETWORK 016 Line 0010 # W # R    C6
+                   # OB1      NETWORK 016 Line 0013 # R # A    C6
+                   # OB1      NETWORK 016 Line 0016 # R # L    C6
+   C7              # OB1      NETWORK 018 Line 0006 # W # CU   C7
+                   # OB1      NETWORK 018 Line 0010 # W # S    C7
+                   # OB1      NETWORK 018 Line 0012 # W # R    C7
+                   # OB1      NETWORK 018 Line 0015 # R # A    C7
+                   # OB1      NETWORK 018 Line 0018 # R # L    C7
